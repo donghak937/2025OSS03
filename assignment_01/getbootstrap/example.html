@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+    <title>sign in</title>
+    <style>
+        body{
+            background-color: rgb(57, 57, 57);
+        }
+        .login {
+            display: flex;
+            flex-direction: column;   /* 세로 방향으로 정렬 */
+            align-items: center;      /* 가로 중앙 */
+            justify-content: center;  /* 세로 중앙 */
+            height: 100vh;
+        }
+        .login p{
+            display:flex;
+            width: 250px;
+            font-size: 150%;
+        }
+        .box {
+            width: 250px;
+            height: 50px;
+            background: white;
+            text-align: center;
+            line-height: 80px;
+        }
+        .box.email{
+            border-radius: 5px 5px 0px 0px;
+            background-color: rgb(47, 47, 47);
+            padding: 1px;
+            text-align: left;
+            color: white;
+        }
+        .box.password{
+            border-radius: 0px 0px 5px 5px;
+            background-color: rgb(47, 47, 47);
+            text-align: left;
+            color: white;
+            padding: 1px;
+        }
+        .login .check{
+            margin-top: 15px;
+            flex-direction: row;
+            justify-content: flex-start;
+            display:flex;
+            width: 250px;
+            color: white;
+        }
+        .button_login{
+            margin-top: 20px;
+            width: 250px;
+            height: 50px;
+            background-color: rgb(64, 64, 249);
+            color: white;
+            border-radius: 5px;
+        }
+        .img_cont{
+            justify-content: flex-start;
+            width: 250px;
+        }
+        input::placeholder {
+            text-align: left;
+            padding: 10px;
+            color: rgb(102, 102, 102);
+        }
+    </style>
+    </head>
+    <body>
+        <div class="login">
+            <div class="img_cont">
+                <img src="./bootstrap-logo.svg" alt="img" width="72" height="57">
+            </div>
+            <p style="color: white;">Please Sign in</p>
+            <input type="email" placeholder="Email address" class="box email"></input>
+            <input type="password" placeholder="Password" class="box password"></input>
+            <div class="check">
+                <input type="checkbox"/>
+                <label for="Remember">Remember</label>
+            </div>
+            <button type="button" class="button_login">Sign in</button>
+            <p style="color: rgb(168, 168, 168); font-size: 80%;">© 2017–2025</p>
+        </div>
+    </body>
+</html>
+
+<!-- 참고 사이트 -->
+<!-- https://jangmay.tistory.com/5 placeholder -->
