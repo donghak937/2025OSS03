@@ -10,12 +10,40 @@
                 color: white;
                 padding: 5px 10px;
             }
+            .div_nav_top h1{
+                margin: 0px;
+            }
+            ul{
+                list-style: none;
+                padding: 0px;
+            }
             .div_nav_top_title{
                 margin: 0px;
             }
             .div_main_content{
                 display: flex;
             }
+            .div_nav_left ul li{
+                border: 1px solid gray;
+                width: 200px;
+                border-radius: 5px;
+                margin: 2px;
+                background-color: rgb(243, 243, 243);
+
+            }
+            .div_nav_left ul li.active{
+                background-color: green;
+                color: white;
+            }
+            .div_right_content{
+                background-color: rgb(137, 205, 234);
+                color: white;
+                margin: 10px;
+                padding: 5px;
+                border-radius: 5px;
+                width: 20vw;
+            }
+            
         </style>
     </head>
 
@@ -31,7 +59,7 @@
         <div class="div_main_content">
             <div class="div_nav_left">
                 <ul>
-                    <li>Stylesheet 1</li>
+                    <li class="active">Stylesheet 1</li>
                     <li>Stylesheet 2</li>
                     <li>Stylesheet 3</li>
                     <li>Stylesheet 4</li>
