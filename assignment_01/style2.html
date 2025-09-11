@@ -6,7 +6,7 @@
         <style>
             body{
                 background-color: #d14836;
-                font-family: Arial, Helvetica, sans-serif;
+                font-family: Arial;
             }
             .div_nav_top{
                 color: white;
@@ -55,11 +55,19 @@
                 text-align: center;
                 height: 30px;
                 line-height: 30px;
+                font-family: Verdana;
+            }
+            .div_nav_right ul li.active{
+                background-color: white;
+                color: #d14836;
+                font-weight: bold;
             }
             .div_centercontent h1{
                 color: #d14836;
+                font-family: Verdana;
             }
             .div_centercontent h2{
+                font-family: Verdana;
                 color: #d14836;
             }
             .div_centercontent a{
@@ -84,7 +92,7 @@
                 <h1>Same Page Different Stylesheets</h1>
                 <div>This is a demonstration of how different stylesheets can change the layout of your HTML page. You can change the layout of this page by selecting different stylesheets in the menu, or by selecting one of the following links:</div>
                 <a href="./style1.html">Stylesheet1</a>,
-                <a href="./style2.html">Stylesheet2</a>,
+                <a class="active" href="./style2.html">Stylesheet2</a>,
                 <a href="./style3.html">Stylesheet3</a>,
                 <a href="./style4.html">Stylesheet4</a>
                 <h2>No Styles</h2>
