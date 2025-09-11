@@ -5,13 +5,26 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width-device-width, inital-scale = 1.0">
         <title>250911</title>
+        <style>
+            .div_position{
+                background-color: aqua;
+            }
+        </style>
     </head>
 
     <body>
-        <div style="display: block;">display block</div>
-        <div style="display: inline;">display inline</div>
-        <div style="display: none;">display none</div>
-        확인 1
-        <div style="visibility: collapse;">visibility</div>
+        <div style="display: block;">display block 가로 끝까지 차지함 (자동 줄바꿈)</div>
+        <div style="display: inline;">display inline 가로를 내용만큼만 차지 (줄바꿈 X)</div>
+        <div style="display: none;">display none 공간 배정 안됨</div>
+        확인1
+        <div style="visibility: collapse;">visibility 안보이는데 공간은 차지함</div>
+        확인2
+
+        <!-- position -->
+        <div class="div_position" style="position: static;">static</div>
+        확인
+        <div class="div_position" style="position: relative; left: 50px;">relative</div>
+        확인
+
     </body>
 </html>
