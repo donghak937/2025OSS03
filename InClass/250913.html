@@ -9,7 +9,7 @@
         <form action="form_ok.html" method="get">
             <!-- action은 정보를 제출함 url!, method는 폼 데이터를 전송하는 방식! -->
             <label for="input_name">이름 : </label> <br/>
-            <input type="text" name="name" id = "input_name" placeholder="내용을 입력해 주세요"><br/>
+            <input type="text" name="name" id = "input_name" placeholder="내용을 입력해 주세요" autofocus><br/>
             <!-- placeholder는 아무것도 입력 되지 않았을 때 문구 나오는거-->
             <label for="input_email">이메일: </label> <br/>
             <input type="text" name="email" id = "input_email"><br/>
@@ -27,6 +27,13 @@
             <div>
                 <label for="input_text">TEXT</label>
                 <input type="text" name="text" id = "input_text"><br/>
+                <!--
+                <style>
+                    input[type='text']:read-only{
+                        background-color: skyblue;
+                    }
+                </style>-->
+
             </div>
             
             <div>
