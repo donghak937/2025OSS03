@@ -105,6 +105,15 @@
                     </optgroup>
                 </select>
             </div>
+            <!-- selected -> 기초 설정 multiple -> 여러개-->
+
+            <div>
+                <label for="input_list">LIST</label>
+                <input type="text" name="list" id = "input_list" list="list_fruit"><br/>
+                <datalist id = "list_fruit">
+                    <option value="apple">사과</option>
+                </datalist>
+            </div>
 
             <input type="submit" value="제출">
             <input type="reset" value="취소">
