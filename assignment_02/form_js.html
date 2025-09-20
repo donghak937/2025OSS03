@@ -1,0 +1,656 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Form Practice</title>
+        <style>
+            .main h2{
+                margin-left: 10px;
+            }
+            body{
+                padding: 40px 200px;
+                background-color: rgb(232, 232, 232);
+            }
+            .pic{
+                text-align: center;
+            }
+            .head_p{
+                text-align: center;
+            }
+            .layout{
+                display: flex;
+            }
+            .name{
+                display: flex;
+            }
+            .name input{
+                display: flex;
+                width: 300px;
+                height: 35px;
+                border-radius: 5px;
+                border: 1px solid rgb(145, 144, 144);
+            }
+            .first_name, .last_name{
+                padding: 6px 12px;
+            }
+            .first_name label{
+                display:block;
+                margin-bottom: -12px;
+            }
+            .last_name label{
+                display:block;
+                margin-bottom: -12px;
+            }
+            .user_name{
+                padding: 6px 12px;
+            }
+            .user_name div{
+                align-items:stretch;
+                display:flex;
+            }
+            .user_name label{
+                display:block;
+                margin-bottom: -12px;
+            }
+            .user_name input{
+                width: 589px;
+                height: 35px;
+                border-radius: 0px 5px 5px 0px;
+                border: 1px solid rgb(145, 144, 144);
+            }
+            .user_name input::placeholder{
+                padding: 10px;
+                font-size: 110%;
+            }
+            .user_name span{
+                border-radius: 5px 0px 0px 5px;
+                border: 1px solid rgb(145, 144, 144);
+                background-color: rgb(220, 220, 220);
+                display:inline-block;
+                height: 32px;
+                width: 40px;
+                border-right:0;
+                text-align: center;
+                padding-top: 5px; 
+            }
+            .user_email{
+                padding: 6px 12px;
+            }
+            .user_email input{
+                width: 629px;
+                height: 35px;
+                border-radius: 5px;
+                border: 1px solid rgb(145, 144, 144);
+            }
+            .user_email input::placeholder{
+                padding: 10px;
+                font-size: 110%;
+            }
+            .email_text{
+                display:block;
+                margin-bottom: 12px;
+            }
+            .email_text span{
+                color: rgb(145, 144, 144);
+            }
+            .user_address{
+                padding: 6px 12px;
+            }
+            .user_address input{
+                width: 629px;
+                height: 35px;
+                border-radius: 5px;
+                border: 1px solid rgb(145, 144, 144);
+            }
+            .user_address label{
+                display:block;
+                margin-bottom: 12px;
+            }
+            .user_address input::placeholder{
+                padding: 10px;
+                font-size: 110%;
+            }
+            .user_address2{
+                padding: 6px 12px;
+            }
+            .user_address2 input{
+                width: 629px;
+                height: 35px;
+                border-radius: 5px;
+                border: 1px solid rgb(145, 144, 144);
+            }
+            .user_address2 input::placeholder{
+                padding: 10px;
+                font-size: 110%;
+            }
+            .user_address2{
+                display:block;
+                margin-bottom: 12px;
+            }
+            .user_address2 span{
+                color: rgb(145, 144, 144);
+            }
+            .user_address2_text{
+                display:block;
+                margin-bottom: 12px;
+            }
+            .chk_holder{
+                padding: 6px 12px;
+                display: flex;
+            }
+            .chk_holder label{
+                display:block;
+                margin-bottom: -12px;
+            }
+            .chk_holder .user_country select{
+                width: 250px;
+                height: 35px;
+                margin-right: 10px;
+                border-radius: 5px;
+                font-size: 100%;
+            }
+            .chk_holder .user_state select{
+                width: 214px;
+                height: 35px;
+                margin-right: 10px;
+                border-radius: 5px;
+                font-size: 100%;
+            }
+            .chk_holder .user_zip input{
+                width: 140px;
+                height: 31.5px;
+                border-radius: 5px;
+                border: 1px solid rgb(145, 144, 144);
+            }
+            .chk_1{
+                margin: 20px 0px;
+                padding: 6px 12px;
+            }
+            .rid_1{
+                margin: 20px 0px;
+                padding: 6px 12px;
+            }
+            .cards{
+                display: flex;
+                padding: 6px 12px;  
+            }
+            .cards .card1 input{
+                width: 300px;
+                height: 35px;
+                border-radius: 5px;
+                border: 1px solid rgb(145, 144, 144);
+                margin-right: 30px;
+            }
+            .cards .card1 label{
+                display:block;
+                margin-bottom: -10px;
+            }
+            .cards .card1 #little{
+                font-size: 80%;
+                color: rgb(124, 124, 124);
+                margin-bottom: 10px;
+            }
+            .cards .card2 input{
+                width: 300px;
+                height: 35px;
+                border-radius: 5px;
+                border: 1px solid rgb(145, 144, 144);
+            }
+            .cards .card2 label{
+                display:block;
+                margin-bottom: -10px;
+            }
+            .card_info{
+                display: flex;
+                padding: 6px 12px; 
+            }
+            .card_info .info_1 input{
+                width: 130px;
+                height: 35px;
+                border-radius: 5px;
+                border: 1px solid rgb(145, 144, 144);
+                margin-right: 30px;
+            }
+            .card_info .info_1 label{
+                display:block;
+                margin-bottom: -10px;
+            }
+            .card_info .info_2 input{
+                width: 130px;
+                height: 35px;
+                border-radius: 5px;
+                border: 1px solid rgb(145, 144, 144);
+            }
+            .card_info .info_2 label{
+                display:block;
+                margin-bottom: -10px;
+            }
+            .last_button{
+                text-align: center; 
+                padding: 6px 12px;
+            }
+            .last_button input{
+                width: 650px;
+                height: 50px;
+                color: white;
+                background-color: rgb(0, 106, 255);
+                border: 0px;
+                border-radius: 10px;
+                font-size: 130%;
+            }
+            .side_title{
+                display: flex;
+                margin-bottom: -20px;
+            }
+            .side_title h2{
+                font-weight: 400;
+                color: rgb(0, 106, 255);
+            }
+            .side_title span{
+                margin-left:auto;
+                margin-top: 28px;
+                border-radius: 50px;
+                background-color: rgb(0, 106, 255);
+                color: white;
+                height: 24px;
+                width: 30px;
+                text-align: center;    
+            }
+            .list_box{
+                padding: 0;
+            }
+            .list_box li{
+                background-color: white;
+                border: 1px solid rgb(145, 144, 144);
+                list-style-type: none;
+                display: flex;
+                padding: 10px;
+            }
+            .list_box #top{
+                border-radius: 5px 5px 0px 0px;
+                border-bottom: 0px;
+            }
+            .list_box #last{
+                border-radius: 0px 0px 5px 5px;
+            }
+            .list_box #second, #third, #forth{
+                border-bottom: 0px;
+            }
+            .list_box #forth{
+                background-color: rgb(236, 236, 236);
+            }
+            .list_box #last span{
+                color: black;
+                font-weight: bold;
+            }
+            .list_box li p{
+                margin: 0%;
+            }
+            .list_box li span{
+                margin-left: auto;
+                padding-top: 2px;
+                padding-right: 5%;
+                color: rgb(145, 144, 144);
+            }
+            .list_box li #sub{
+                font-size: 80%;
+                color: rgb(145, 144, 144);
+            }
+            .list_box li #active{
+                color: rgb(40, 110, 40);
+            }
+            .promo_code{
+                border: 1px solid rgb(145, 144, 144);
+                border-radius: 5px;
+                display: flex;
+                padding: 10px
+            }
+            .promo_code input{
+                width: 180px;
+                height: 37px;
+                border-radius: 5px 0px 0px 5px;
+                border: 1px solid rgb(145, 144, 144);
+            }
+            .promo_code input::placeholder{
+                padding: 5px;
+            }
+            .promo_code button{
+                padding: 5px;
+                font-size: 105%;
+                color: white;
+                background-color: gray;
+                border: 0;
+                border-radius: 0px 5px 5px 0px;
+            }
+            .side .note_text{
+                font-size: 30px;
+                margin-right: 10px;
+                color: rgb(114, 114, 217);
+            }
+            .side .note textarea{
+                padding: 6px 12px;
+                width: 260px;
+                margin-top: 10px;
+            }
+            .layout .main .first_name #alrt{
+                margin-top: -15px;
+                color: rgb(232, 232, 232);
+            }
+            .layout .main .last_name #alrt2{
+                margin-top: -15px;
+                color: rgb(232, 232, 232);
+            }
+            .layout .main .user_name #alrt_uname{
+                margin: 0;
+                color: rgb(232, 232, 232);
+            }
+            .layout .main .user_email #alrt_email{
+                color: rgb(232, 232, 232);
+                margin: 0;
+            }
+            .layout .main .user_address #alrt_address{
+                color: rgb(232, 232, 232);
+                margin: 0;
+            }
+            .layout .main .user_zip #alrt_zip{
+                color: rgb(232, 232, 232);
+                margin: 0;
+            }
+            .layout .main .card2 #alrt_card{
+                color: rgb(232, 232, 232);
+                margin: 0;
+            }
+            .layout .main .info_2 #alrt_last{
+                color: rgb(232, 232, 232);
+                margin: 0;
+            }
+            
+        </style>
+        <script>
+            function check(){
+                let check = true;
+                if(main_form.fname.value == ""){
+                    main_form.fname.focus();
+                    document.getElementById("alrt").style.color = "red";
+                    check = false;
+                }
+                else {
+                    document.getElementById("alrt").style.color = "rgb(232, 232, 232)";
+                }
+
+                if(main_form.lname.value == ""){
+                    document.getElementById("alrt2").style.color = "red";
+                    check = false;
+                }
+                else {
+                    document.getElementById("alrt2").style.color = "rgb(232, 232, 232)";
+                }
+                if(main_form.uname.value == ""){
+                    document.getElementById("alrt_uname").style.color = "red";
+                    check = false;
+                }
+                else {
+                    document.getElementById("alrt_uname").style.color = "rgb(232, 232, 232)";
+                }
+                if(!main_form.email.value.includes("@") || !main_form.email.value.includes(".")){
+                    document.getElementById("alrt_email").style.color = "red";
+                    check = false;
+                }
+                else {
+                    document.getElementById("alrt_email").style.color = "rgb(232, 232, 232)";
+                }
+                if(main_form.address.value == ""){
+                    document.getElementById("alrt_address").style.color = "red";
+                    check = false;
+                }
+                else {
+                    document.getElementById("alrt_address").style.color = "rgb(232, 232, 232)";
+                }
+                if(isNaN(main_form.zip.value) || main_form.zip.value == ""){
+                    document.getElementById("alrt_zip").style.color = "red";
+                    check = false;
+                }
+                else {
+                    document.getElementById("alrt_zip").style.color = "rgb(232, 232, 232)";
+                }
+                
+                let pattern = /[0-9][0-9][0-9][0-9]-[0-9][0-9][0-9][0-9]-[0-9][0-9][0-9][0-9]-[0-9][0-9][0-9][0-9]/g;
+                
+                if(!main_form.cnumber.value.match(pattern)){
+                    document.getElementById("alrt_card").style.color = "red";
+                    check = false;
+                }
+                else {
+                    document.getElementById("alrt_card").style.color = "rgb(232, 232, 232)";
+                }
+                
+                if(main_form.CVV.value == ""){
+                    document.getElementById("alrt_last").style.color = "red";
+                    check = false;
+                }
+                else {
+                    document.getElementById("alrt_last").style.color = "rgb(232, 232, 232)";
+                }
+                return check;
+            }
+            </script>
+    </head>
+    
+    <body>
+        <div class="pic">
+            <img src="bootstrap-logo.svg" alt="" width="72" height="57">
+        </div>
+
+        <form action="save.php" name="main_form" onsubmit="return check()">
+            <div class="head_p">
+                <h1>Checkout form</h1>
+                <p>Below is an example form built entirely with Bootstrap’s 
+                    form controls. Each required form group has a validation 
+                    state that can be triggered by attempting to submit the 
+                    form without completing it.</p>
+            </div>
+
+            <div class="layout">
+                <div class="main">
+                    <h2>Billing address</h2>
+                    <div class="name">
+
+                        <div class="first_name">
+                            <label for="fname">First name</label><br>
+                            <input type="text" name="fname" id = "fname" ><br/>
+                            <p id="alrt">이름을 입력해 주세요</p>
+                        </div>
+
+                        <div class="last_name">
+                            <label for="lname">Last name</label><br>
+                            <input type="text" name="lname" id = "lname" ><br/>
+                            <p id="alrt2">이름을 입력해 주세요</p>
+                        </div>
+                    
+                    </div>
+    
+                    <div class="user_name">
+                        <label for="uname">User name</label><br>
+                        <div>
+                            <span>@</span>
+                            <input type="text" name="uname" id = "uname"  placeholder="Username"><br/>
+                        </div>
+                        <p id="alrt_uname">이름을 입력해 주세요</p>
+                    </div>
+    
+                    <div class="user_email">
+                        <div class="email_text">
+                            <label for="email">Email</label>
+                            <span>(optional)</span><br>
+                        </div>
+                        <input type="text" name="email" id = "email" placeholder="you@example.com"><br/>
+                        <p id="alrt_email">유효하지 않은 이메일 입니다.</p>
+                    </div>
+    
+                    <div class="user_address">
+                        <label for="address">Address</label>
+                        <input type="text" name="address" id = "address"  placeholder="1234 Main St"><br/>
+                        <p id="alrt_address">주소를 입력해 주세요</p>
+                    </div>
+    
+                    <div class="user_address2">
+                        <div class="user_address2_text">
+                            <label for="address 2">Address2</label>
+                            <span>(Optional)</span>
+                        </div>
+                        <input type="text" name="address2" id = "address2" placeholder="Apartment or suite"><br/>
+                    </div>
+    
+                    <div class="chk_holder">
+                        <div class="user_country">
+                            <label for="country">Country</label><br>
+                            <select name="country" id="country">
+                                <option value="1">Choose...</option>
+                                <option value="2">Unite State</option>
+                            </select>
+                        </div>
+                        
+                        <div class="user_state">
+                            <label for="state">State</label><br>
+                            <select name="state" id="state">
+                                <optgroup label="West">
+                                    <option value="1">Califonia</option>
+                                    <option value="2">Oklahoma</option>
+                                    <option value="3">Utah</option>
+                                </optgroup>
+                                <optgroup label="East">
+                                    <option value="1">North Carolina</option>
+                                    <option value="2">New York</option>
+                                    <option value="3">Washington dc</option>
+                                </optgroup>
+                            </select>
+                        </div>
+        
+                        <div class="user_zip">
+                            <label for="zip">Zip</label><br>
+                            <input type="text" name="zip" id = "zip" ><br/>
+                            <p id="alrt_zip">숫자만 입력해 주세요</p>
+                        </div>
+
+                    </div>
+                    <hr>
+    
+                    <div class="chk_1">
+                        <fieldset>
+                            <legend>For the next time...</legend>
+                            <input type="checkbox" name="ckb1" id="ckb1" value="1"> Shipping address is the same as my billing address <br>
+                            <input type="checkbox" name="ckb1" id="ckb1" value="2"> Save this information for next time
+                        </fieldset>
+                    </div>
+                    <hr>
+                    
+                    <div class="rid_1">
+                        <h2>Payment</h2>
+                        <input type="radio" name="rad1" id="rad1" value="1" checked> Credit card <br>
+                        <input type="radio" name="rad1" id="rad1" value="2"> Debit card <br>
+                        <input type="radio" name="rad1" id="rad1" value="3"> PayPal <br>
+                    </div>
+    
+                    <div class="cards">
+                        <div class="card1">
+                            <label for="cname">Name on card</label><br>
+                            <input type="text" name="cname" id = "cname" ><br/>
+                            <label for="cnumber" id="little">Full name as displayed on card</label>
+                        </div>
+                        <div class="card2">
+                            <label for="cnumber">Credit card number</label><br>
+                            <input type="text" name="cnumber" id = "cnumber" ><br/>
+                            <p id="alrt_card">유효하지 않은 카드번호 입니다</p>
+                        </div>
+                    </div>
+                    
+                    <div class="card_info">
+                        <div class="info_1">
+                            <label for="Expiration">Expiration</label><br>
+                            <input type="date" name="Expiration" id = "Expiration" ><br/>
+                        </div>
+                        <div class="info_2">
+                            <label for="CVV">CVV</label><br>
+                            <input type="text" name="CVV" id = "CVV" maxlength="3">
+                            <p id="alrt_last">유효하지 않은 입력입니다</p>
+                        </div>
+                    </div>
+                    <hr>
+
+                    <div class="last_button">
+                        <input type="submit" value="Continue to checkbox">
+                    </div>
+                </div>
+    
+                <div class="side">
+                    <div class="side_title">
+                        <h2>Your cart</h2>
+                        <span>3</span> 
+                    </div>
+    
+                    <div class="side_bar">
+                        <ul class="list_box">
+                            <li id="top">
+                                <div>
+                                    <p>Product name</p>
+                                    <p id="sub">Brief description</p>
+                                </div>
+                                <span>$12</span>
+                            </li>
+                            <li id="second">
+                                <div>
+                                    <p>Second product</p>
+                                    <p id="sub">Brief description</p>
+                                </div>
+                                <span>$8</span>
+                            </li>
+                            <li id="third">
+                                <div>
+                                    <p>Third item</p>
+                                    <p id="sub">Brief description</p>
+                                </div>
+                                <span>$5</span>
+                            </li>
+                            <li id="forth">
+                                <div id="active">
+                                    <p>Promo code</p>
+                                    <p>EXAMPLECODE</p>
+                                </div>
+                                <span id="active">−$5</span>
+                            </li>
+                            <li id="last">
+                                <div>
+                                    <p>Total (USD)</p>
+                                </div>
+                                <span>$20</span>
+                            </li>
+                        </ul>
+                    </div>
+    
+                    <form action="promo.php">
+                       <div class="promo_code">
+                           <input type="text" name="promo_code" id = "promo_code" placeholder="Promo code">
+                           <button type="submit">Redeem</button>
+                        </div>  
+                    </form>
+
+                    <label for="area" class="note_text">Note</label>
+                    <div class="note">
+                        <form action="note.php">
+                            <textarea name="textarea" id="area"></textarea>
+                        </form>
+                    </div>
+                    <div class="data_list">
+                        <label for="book">Choose a book</label><br>
+                        <input list="book" id="books">
+                        <datalist id="book">
+                            <option value="THE SECRET OF SECRETS"></option>
+                            <option value="WILD CARD"></option>
+                            <option value="CLOWN TOWN"></option>
+                        </datalist>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </body>
+</html>

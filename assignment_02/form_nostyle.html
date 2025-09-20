@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Form Practice</title>
+
+    </head>
+
+        <body>
+        <div class="pic">
+            <img src="bootstrap-logo.svg" alt="" width="72" height="57">
+        </div>
+
+        <form action="save.php">
+            <div class="head_p">
+                <h1>Checkout form</h1>
+                <p>Below is an example form built entirely with Bootstrap’s form 
+                    controls. Each required form group has a validation state that
+                     can be triggered by attempting to submit the form without 
+                     completing it.</p>
+            </div>
+
+            <div class="layout">
+                <div class="main">
+                    <h2>Billing address</h2>
+                    <div class="name">
+
+                        <div class="first_name">
+                            <label for="fname">First name</label><br>
+                            <input type="text" name="fname" id = "fname" required><br/>
+                        </div>
+
+                        <div class="last_name">
+                            <label for="lname">Last name</label><br>
+                            <input type="text" name="lname" id = "lname" required><br/>
+                        </div>
+                    
+                    </div>
+    
+                    <div class="user_name">
+                        <label for="uname">User name</label><br>
+                        <div>
+                            <span>@</span>
+                            <input type="text" name="uname" id = "uname" required placeholder="Username"><br/>
+                        </div>
+                    </div>
+    
+                    <div class="user_email">
+                        <div class="email_text">
+                            <label for="email">Email</label>
+                            <span>(optional)</span><br>
+                        </div>
+                        <input type="text" name="email" id = "email" placeholder="you@example.com"><br/>
+                    </div>
+    
+                    <div class="user_address">
+                        <label for="address">Address</label>
+                        <input type="text" name="address" id = "address" required placeholder="1234 Main St"><br/>
+                    </div>
+    
+                    <div class="user_address2">
+                        <div class="user_address2_text">
+                            <label for="address 2">Address2</label>
+                            <span>(Optional)</span>
+                        </div>
+                        <input type="text" name="address2" id = "address2" placeholder="Apartment or suite"><br/>
+                    </div>
+    
+                    <div class="chk_holder">
+                        <div class="user_country">
+                            <label for="country">Country</label><br>
+                            <select name="country" id="country">
+                                <option value="1">Choose...</option>
+                                <option value="2">Unite State</option>
+                            </select>
+                        </div>
+                        
+                        <div class="user_state">
+                            <label for="state">State</label><br>
+                            <select name="state" id="state">
+                                <optgroup label="West">
+                                    <option value="1">Califonia</option>
+                                    <option value="2">Oklahoma</option>
+                                    <option value="3">Utah</option>
+                                </optgroup>
+                                <optgroup label="East">
+                                    <option value="1">North Carolina</option>
+                                    <option value="2">New York</option>
+                                    <option value="3">Washington dc</option>
+                                </optgroup>
+                            </select>
+                        </div>
+        
+                        <div class="user_zip">
+                            <label for="zip">Zip</label><br>
+                            <input type="text" name="zip" id = "zip" required><br/>
+                        </div>
+
+                    </div>
+                    <hr>
+    
+                    <div class="chk_1">
+                        <fieldset>
+                            <legend>For the next time...</legend>
+                            <input type="checkbox" name="ckb1" id="ckb1" value="1"> Shipping address is the same as my billing address <br>
+                            <input type="checkbox" name="ckb1" id="ckb1" value="2"> Save this information for next time
+                        </fieldset>
+                    </div>
+                    <hr>
+                    
+                    <div class="rid_1">
+                        <h2>Payment</h2>
+                        <input type="radio" name="rad1" id="rad1" value="1" checked> Credit card <br>
+                        <input type="radio" name="rad1" id="rad1" value="2"> Debit card <br>
+                        <input type="radio" name="rad1" id="rad1" value="3"> PayPal <br>
+                    </div>
+    
+                    <div class="cards">
+                        <div class="card1">
+                            <label for="cname">Name on card</label><br>
+                            <input type="text" name="cname" id = "cname" required><br/>
+                            <label for="cnumber" id="little">Full name as displayed on card</label>
+                        </div>
+                        <div class="card2">
+                            <label for="cnumber">Credit card number</label><br>
+                            <input type="text" name="cnumber" id = "cnumber" required><br/>
+                        </div>
+                    </div>
+                    
+                    <div class="card_info">
+                        <div class="info_1">
+                            <label for="Expiration">Expiration</label><br>
+                            <input type="date" name="Expiration" id = "Expiration" required><br/>
+                        </div>
+                        <div class="info_2">
+                            <label for="CVV">CVV</label><br>
+                            <input type="text" name="CVV" id = "CVV" required>
+                        </div>
+                    </div>
+                    <hr>
+
+                    <div class="last_button">
+                        <input type="submit" value="Continue to checkbox">
+                    </div>
+                </div>
+    
+                <div class="side">
+                    <div class="side_title">
+                        <h2>Your cart</h2>
+                        <span>3</span> 
+                    </div>
+    
+                    <div class="side_bar">
+                        <ul class="list_box">
+                            <li id="top">
+                                <div>
+                                    <p>Product name</p>
+                                    <p id="sub">Brief description</p>
+                                </div>
+                                <span>$12</span>
+                            </li>
+                            <li id="second">
+                                <div>
+                                    <p>Second product</p>
+                                    <p id="sub">Brief description</p>
+                                </div>
+                                <span>$8</span>
+                            </li>
+                            <li id="third">
+                                <div>
+                                    <p>Third item</p>
+                                    <p id="sub">Brief description</p>
+                                </div>
+                                <span>$5</span>
+                            </li>
+                            <li id="forth">
+                                <div id="active">
+                                    <p>Promo code</p>
+                                    <p>EXAMPLECODE</p>
+                                </div>
+                                <span id="active">−$5</span>
+                            </li>
+                            <li id="last">
+                                <div>
+                                    <p>Total (USD)</p>
+                                </div>
+                                <span>$20</span>
+                            </li>
+                        </ul>
+                    </div>
+    
+                    <form action="promo.php">
+                       <div class="promo_code">
+                           <input type="text" name="promo_code" id = "promo_code" placeholder="Promo code">
+                           <button type="submit">Redeem</button>
+                        </div>  
+                    </form>
+
+                    <label for="area" class="note_text">Note</label>
+                    <div class="note">
+                        <form action="note.php">
+                            <textarea name="textarea" id="area"></textarea>
+                        </form>
+                    </div>
+                    <div class="data_list">
+                        <label for="book">Choose a book</label><br>
+                        <input list="book" id="books">
+                        <datalist id="book">
+                            <option value="THE SECRET OF SECRETS"></option>
+                            <option value="WILD CARD"></option>
+                            <option value="CLOWN TOWN"></option>
+                        </datalist>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </body>
+
+</html>
