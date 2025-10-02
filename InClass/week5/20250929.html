@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    
+    <title>Document</title>
+
+    <style>
+        /*
+        div.example{
+            font-size: 80px;
+            background-color: yellowgreen;
+        }   
+        @media only screen and (max-width : 451px){
+            div.example{
+                font-size: 30px;
+                background-color: aquamarine;
+            }
+
+        }
+        @media only screen and (max-width : 600px)  and (min-width : 451px) {
+            div.example{
+                font-size: 40px;
+                background-color: pink;
+            }
+
+        }
+        @media only screen and (min-width : 601px) {
+            div.example{
+                font-size: 50px;
+                background-color: yellowgreen;
+            }
+
+        }*/
+        div.example1{
+            font-size: 30px;
+            background-color: aquamarine;
+        }
+        div.example2{
+            font-size: 40px;
+            background-color: pink;
+        }
+        div.example3{
+            font-size: 50px;
+            background-color: yellowgreen;
+        }
+        img{
+            max-width: 100%;
+            height: auto;
+        }
+        div.div_img{
+            height: 300px;
+            background-image: url("https://i.namu.wiki/i/v8yNjB16ijFF3ZhPgBhsBHfvcXIXvzz-C-Zi3d1UZM657ALY1seeeUrfhqS_qMEWGdS6WJbPDFtGa0KhvbKEsg.webp");
+            /*background-repeat: no-repeat;*/
+            /*background-size: 100% 100%;*/
+            background-size: contain;
+        }
+    </style>
+</head>
+    <body>
+        <div class="example">example</div>
+
+        450px 이하일 때, 배경은 아쿠아마린 / 글자 크기는 30px
+        451px - 600px일때, 배경 핑크 / 글자크기 40px
+        601px 이상, 배경 옐로그린/글자크기는 50px  
+
+        <script>
+            let memory_temp = confirm("이게 기억난다고?");
+            if(!memory_temp){
+                alert("다시 공부 하셈")
+            }
+
+
+            listener_resize();
+            function listener_resize(){
+                let width = window.innerWidth;
+                //let width2 = $(window).width();
+                $(".example").removeClass("example2");
+                $(".example").removeClass("example2");
+                $(".example").removeClass("example3");
+                
+
+                if (width > 600){
+                    $(".example").addClass("example3");
+                }
+                else if (width > 450){
+                    $(".example").addClass("example2");
+                }
+                else $(".example").addClass("example1");
+    
+            }
+            
+            window.addEventListener("resize", function() {
+                console.log("resized");
+                listener_resize();
+            });
+            /*
+            $(window).resize(function(){
+                console.log("resized2");
+            });*/
+
+            </script>
+
+            <img src="https://i.namu.wiki/i/v8yNjB16ijFF3ZhPgBhsBHfvcXIXvzz-C-Zi3d1UZM657ALY1seeeUrfhqS_qMEWGdS6WJbPDFtGa0KhvbKEsg.webp" alt="">
+
+            <div class="div_img">
+                <br><br><br><br><br>
+            </div>
+
+    </body>
+</html>
