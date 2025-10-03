@@ -13,3 +13,9 @@ a {
   justify-content: flex-start; /* 위에서부터 차곡 */
 }
 
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
