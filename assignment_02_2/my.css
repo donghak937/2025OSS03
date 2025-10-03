@@ -1,57 +1,41 @@
-.no-resize{
-    resize: none;
-}
-a {
-    color: black;
-    text-decoration-line: none;
-}
-
-
-/* ================== 모바일 전용 패치 ================== */
-/* 동적 vh 지원(모바일 주소창 높이 변화 대응) */
-:root { --vh: 100vh; --nav-h: 56px; } /* 필요하면 nav 높이 조금씩 조정 */
-@supports (height: 100dvh) {
-  :root { --vh: 100dvh; }
-}
-
+/* ===== 모바일 강제 재배치 (<=575.98px) ===== */
 @media (max-width: 575.98px) {
-
-  /* (A) Game_Raters를 메뉴 위로 올리기 */
-  .navbar .container-fluid { 
-    flex-wrap: wrap;               /* 새 줄 허용 */
-    justify-content: center;
-  }
+  /* 네비: Game_Raters를 메뉴 위로 */
+  .navbar .container-fluid { display: flex; flex-wrap: wrap; justify-content: center; }
   .navbar .navbar-text {
-    order: -1;                     /* 맨 위 줄로 */
-    width: 100%;
-    text-align: center;
-    margin: .25rem 0 .25rem 0;
-    font-weight: 700;
-    font-size: 1.05rem;
+    order: -1; width: 100%; text-align: center;
+    margin: .25rem 0 !important; font-weight: 700;
   }
-  .navbar .navbar-nav {
-    width: 100%;
-    justify-content: center;
+  .navbar .navbar-nav { width: 100%; justify-content: center; }
+
+  /* form 라인: col-sm-* 전부 가로 100%로(한 줄씩 세로 스택) */
+  .row.mb-3.align-items-center > .col-sm-1,
+  .row.mb-3.align-items-center > .col-sm-2,
+  .row.mb-3.align-items-center > .col-sm-5,
+  .row.mb-3.align-items-center > .col-sm-6,
+  .row.mb-3.align-items-center > .col-sm-7 {
+    flex: 0 0 100% !important;
+    max-width: 100% !important;
   }
 
-  /* (B) 테이블을 화면 하단까지 꽉 채우기 */
-  /* 컨테이너를 화면 높이에 맞춰 늘리고, 자식 중 테이블이 남은 공간을 차지하도록 */
-  .container {
-    min-height: calc(var(--vh) - var(--nav-h));   /* 네비 높이 만큼 빼서 꽉 채움 */
-    display: flex;
-    flex-direction: column;
+  /* label은 위, input은 아래로 간격 */
+  .row.mb-3.align-items-center label.col-form-label {
+    margin-bottom: .25rem;
   }
-  /* 제목/검색줄(맨 위 d-flex 줄)은 내용 높이만 */
-  .container > .d-flex {
-    flex: 0 0 auto;
-  }
-  /* 테이블이 남은 공간 전부 차지 */
-  .table {
-    display: block;        /* flex 높이 계산에 더 안정적 */
-    flex: 1 1 auto;        /* 남는 높이 모두 사용 */
-    margin-bottom: 0;      /* 불필요한 아래 여백 제거 */
-  }
+
+  /* 점수 select가 w-auto라 좁은 문제 → 꽉 채우기 */
+  .form-select.w-auto { width: 100% !important; }
+
+  /* 버튼 줄 가운데 정렬 */
+  .d-flex.justify-content-end { justify-content: center !important; }
 }
+
+/* textarea 리사이즈 금지 유지 */
+.no-resize { resize: none; }
+
+/* 링크 색상 유지 */
+a { color: black; text-decoration-line: none; }
+
 
 
 
