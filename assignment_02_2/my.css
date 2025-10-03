@@ -6,16 +6,31 @@ a {
     text-decoration-line: none;
 }
 
-.container {
-  min-height: calc(100vh - 120px);  /* navbar+footer 높이 뺀 값, 필요시 조정 */
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start; /* 위에서부터 차곡 */
+/* 📱 모바일 전용 스타일 */
+@media (max-width: 575.98px) {
+  /* (1) 테이블을 화면 하단까지 꽉 차게 */
+  .responsive-scroll,
+  .table {
+    min-height: calc(100vh - 160px); /* navbar, 상단 필터바 높이 빼고 계산 */
+    display: block;
+  }
+
+  /* (2) Game_Raters 문구(navbar-text)를 메뉴 위로 */
+  .navbar .navbar-text {
+    display: block;
+    width: 100%;
+    text-align: center;
+    order: -1; /* flexbox 순서 바꿔서 위로 올리기 */
+    margin-bottom: 0.25rem;
+    font-size: 1.1rem;
+    font-weight: bold;
+  }
+
+  /* 메뉴는 그 밑으로 */
+  .navbar .navbar-nav {
+    width: 100%;
+    justify-content: center;
+  }
 }
 
-html, body {
-  height: 100%;
-  margin: 0;
-  padding: 0;
-}
 
