@@ -6,4 +6,10 @@ a {
     text-decoration-line: none;
 }
 
+.container {
+  min-height: calc(100vh - 120px);  /* navbar+footer 높이 뺀 값, 필요시 조정 */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; /* 위에서부터 차곡 */
+}
 
