@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <script>
+            let fruit1 = ["apple", "mango", "banana"];
+            alert(fruit1[0]);
+
+            let fruit2 = [];
+            fruit2[0] = "orange";
+            fruit2[0] = "melon";
+            fruit2[2] = "pear";
+            alert(fruit2[0]); // orange
+            alert(fruit2[1]); // undefined
+            alert(fruit2[2]); // pear
+
+            for(let i = 0; i < fruit2.length; i++){
+                console.log(fruit2[i]);
+            }
+            for(let each of fruit2){
+                console.log(each);
+            }
+
+            //fruit2.push("lemon");
+            // push 안쓰고 추가하기
+            fruit2[fruit2.length] = "lemon";
+            customPush(fruit2, kiwi);
+
+            fruit2.forEach(function(each){
+                console.log(each)
+            }); // undefined 넘어감
+
+            console.log(fruit2[3]);
+
+            function customPush(prm_array, prm_value){
+                prm_array[prm_array.length] = prm_value;
+            }
+        </script>
+    </head>
+    <body>
+        
+    </body>
+</html>
