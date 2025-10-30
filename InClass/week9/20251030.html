@@ -51,6 +51,21 @@
             let aaa = JSON.stringify(person);
             console.log(person);
             console.log(aaa);
+
+            exeTest();
+            function exeTest(){
+                alert("11");
+            }
+
+            let exeTest = function(){
+                alert(11);
+            }//can not reach alert
+
+            let exeTest = () => {
+                alert(11);
+            }//can not reach alert
+
+            exeTest();
         
         </script>
     </head>
