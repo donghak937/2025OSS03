@@ -1,75 +1,97 @@
 <!DOCTYPE html>
-<html>
-    <head>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<script>
+    let fruits = ["apple", "mango", "banana"];
+    //alert(fruits[0]);
 
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Document</title>
-        <script>
-            let fruit1 = ["apple", "mango", "banana"];
-            alert(fruit1[0]);
+    let fruits2 = [];
+    fruits2[0] = "orange";
+    fruits2[1] = "melon";
+    fruits2[2] = "pear";
+    /*
+    alert(fruits2[0]); // orange
+    alert(fruits2[1]); // undefined
+    alert(fruits2[2]); // pear? (O) error? undefined?
 
-            let fruit2 = [];
-            fruit2[0] = "orange";
-            fruit2[0] = "melon";
-            fruit2[2] = "pear";
-            alert(fruit2[0]); // orange
-            alert(fruit2[1]); // undefined
-            alert(fruit2[2]); // pear
+    for(let i=0;i<fruits2.length;i++){
+        console.log(fruits2[i]);
+    }
+    for(let each of fruits2){
+        console.log(each);
+    }
+    */
 
-            for(let i = 0; i < fruit2.length; i++){
-                console.log(fruit2[i]);
-            }
-            for(let each of fruit2){
-                console.log(each);
-            }
+    //fruits2.push("lemon");
+    fruits2[fruits2.length] = "lemon";
+    customPush(fruits2, "kiwi");
+    fruits2.forEach(function(each){
+        console.log(each);
+    });
 
-            //fruit2.push("lemon");
-            // push 안쓰고 추가하기
-            fruit2[fruit2.length] = "lemon";
-            customPush(fruit2, kiwi);
+    // push라는 메서드를 쓰지 않고, 동일한 기능을 구현해보세요.
+    //함수로 만드시거나, 직접 구현하셔도 됩니다.
+    function customPush(prm_array, prm_value){
+        prm_array[prm_array.length] = prm_value;
+    }
 
-            fruit2.forEach(function(each){
-                console.log(each)
-            }); // undefined 넘어감
+    const fruits3 = ["Bananas", "Oranges", "Apples", "Mangos"];
+    // Destructuring
+    let [fruit1, fruit2] = fruits3;
+    //alert(fruit1 + "//" + fruit2);
 
-            console.log(fruit2[3]);
+    const person = {
+        firstName: "John",
+        lastName: "Doe",
+        age: 50
+    };
+    /*
+    // Destructuring
+    let {lastName, firstName} = person;
+    // Default value
+    let {firstName, lastName, country = "US"} = person;
+    // Property alias
+    let {lastName : name} = person;
 
-            function customPush(prm_array, prm_value){
-                prm_array[prm_array.length] = prm_value;
-            }
+    let {lastName : name} = person;
+    //alert(name);
+    let name2 = person["lastName"];
 
-            const person = { 
-                 firstName: "John",   
-                 lastName: "Doe",  
-                 age: 50 
-                };
+    let string_person = JSON.stringify(person);
 
-            let {lastName : name} = person;
-            let name2 = person.lastName; // 같은 의미!
+    console.log(person);
+    console.log(string_person);
+    let clonePerson = JSON.parse(string_person);
+    console.log(clonePerson);
+    */
+    //exeTest();
+    /*function exeTest(){
+        alert(11);
+    }
+    let extTest = function(){
+      alert(11);
+    };
+    */
 
-            let aaa = JSON.stringify(person);
-            console.log(person);
-            console.log(aaa);
+    let exeTest = () =>{
+        alert(11);
+    }
+    //exeTest();
 
-            exeTest();
-            function exeTest(){
-                alert("11");
-            }
+    //window.open("https://daum.net");
 
-            let exeTest = function(){
-                alert(11);
-            }//can not reach alert
+    console.log("href : " + location.href);
+    console.log("hostname : " + location.hostname);
+    console.log("protocol : " + location.protocol);
+    console.log("pathname : " + location.pathname);
 
-            let exeTest = () => {
-                alert(11);
-            }//can not reach alert
 
-            exeTest();
-        
-        </script>
-    </head>
-    <body>
-        
-    </body>
+    //
+</script>
+</body>
 </html>
