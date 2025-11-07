@@ -1,0 +1,81 @@
+{
+  "games": [
+    {
+      "id": "1",
+      "username": "Olivia",
+      "game_name": "Cyberpunk 2077",
+      "rating": 6,
+      "description": "A stunning redemption. Night City is a breathtaking, immersive metropolis, and the narrative is a gripping, emotional rollercoaster. With its deep RPG mechanics and incredible atmosphere, Cyberpunk 2077 has become an absolute must-play masterpiece of the genre."
+    },
+    {
+      "id": "2",
+      "username": "Sophia",
+      "game_name": "Dave the Dive",
+      "rating": 9,
+      "description": "An unexpectedly perfect hybrid. One moment you're exploring the beautiful, mysterious Blue Hole, the next you're running a bustling sushi restaurant. Its charming characters and incredibly addictive gameplay loop make it a truly special and delightful experience."
+    },
+    {
+      "id": "3",
+      "username": "Chris",
+      "game_name": "Geometry Dash",
+      "rating": 7,
+      "description": "A perfect test of rhythm and reflexes. The concept is simple, but the challenge is immense and deeply satisfying. Paired with an electrifying soundtrack and endless community-made levels, this game is the pinnacle of addictive, music-fueled platforming."
+    },
+    {
+      "id": "4",
+      "username": "Noah",
+      "game_name": "Hades",
+      "rating": 8,
+      "description": "god-tier roguelike and a narrative masterpiece. The combat is fluid and incredibly addictive, but the compelling story and unforgettable characters are what truly elevate it. Every escape attempt from the underworld feels meaningful. A flawless gem of a game."
+    },
+    {
+      "id": "5",
+      "username": "Ava",
+      "game_name": "League of Legends",
+      "rating": 8,
+      "description": "The undisputed king of competitive MOBAs. League of Legends offers unparalleled strategic depth and a skill ceiling that feels limitless. With a vast roster of unique champions, every match is a thrilling, high-stakes test of teamwork and individual prowess."
+    },
+    {
+      "id": "6",
+      "username": "Liam",
+      "game_name": "Minecraft",
+      "rating": 10,
+      "description": "An absolute masterpiece of the sandbox genre. Minecraft offers an unparalleled world of boundless creativity and endless exploration. Its charming aesthetic hides a deep survival experience. A timeless classic that proves imagination is the only limit in gaming."
+    },
+    {
+      "id": "7",
+      "username": "Mia",
+      "game_name": "Slay the Spire",
+      "rating": 10,
+      "description": "The peak of deck-building perfection. Slay the Spire is an endlessly replayable strategy masterpiece with genius design. The \"just one more run\" feeling is dangerously real, thanks to its brilliant synergies and constant sense of discovery."
+    },
+    {
+      "id": "8",
+      "username": "Ethan",
+      "game_name": "Stardew Valley",
+      "rating": 10,
+      "description": "The ultimate cozy game. Stardew Valley is a heartwarming and incredibly deep farming sim that lets you live your perfect rural life. It's more than a game; it's a peaceful escape, full of charm, heart, and endless things to do."
+    },
+    {
+      "id": "9",
+      "username": "Isabella",
+      "game_name": "Terraria",
+      "rating": 9,
+      "description": "A 2D sandbox adventure with boundless possibilities. Terraria offers an incredible sense of exploration, epic boss fights, and a crafting system with staggering depth. It’s a game where the only limit is your own creativity and courage."
+    },
+    {
+      "id": "10",
+      "username": "William",
+      "game_name": "The Binding of Isaac",
+      "rating": 10,
+      "description": "A dark and brilliant roguelike masterpiece. Its twisted art style hides one of the most replayable games ever made. With hundreds of insane item synergies, no two runs are ever the same, making each descent into the basement a unique, chaotic adventure."
+    },
+    {
+      "id": "11",
+      "username": "ㅁㄴㅇㅁㄴㅇㅇㅁㅇㅁ",
+      "game_name": "",
+      "rating": "5",
+      "description": ""
+    }
+  ]
+}

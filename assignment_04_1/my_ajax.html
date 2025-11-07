@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>AJAX Practice CRUD SITE</title>
+
+        <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+        <style>
+            #list_block{
+                background-color: aqua;
+                border: solid 5px black;
+                border-radius: 5px;
+                padding: 5px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>AJAX Practice CRUD SITE</h1>
+
+        <button id="view_btn">View List</button> <br>
+        <button id="add_btn">Add Game</button> 
+        <button id="edit_btn">Edit Game</button>
+        <button id="del_btn">Delete Game</button> <br>
+
+        <label for="id_input">id :</label>
+        <input type="text" id="id_input"><br>
+
+        <label for="username_input">username :</label>
+        <input type="text" id="username_input"><br>
+
+        <label for="gamename_input">gamename :</label>
+        <input type="text" id="gamename_input"><br>
+
+        <label for="rating_input">rating :</label>
+        <input type="number" id="rating_input"><br>
+
+        <label for="description_input">description :</label>
+        <input type="text" id="description_input">
+        <br><br>
+
+        <div id="game_list"></div>
+
+        <script>
+            $("#view_btn").click(function(){
+                alert("Games Loaded");
+
+                const xhr = new XMLHttpRequest();
+                xhr.open("GET","http://localhost:3000/games");
+                xhr.setRequestHeader("content-type","application/json");
+                xhr.send();
+                xhr.onload = () => {
+                    if (xhr.status === 200) {
+                        let res = JSON.parse(xhr.response);
+                        $("#div_list").html("");
+                        res.forEach(function(each){
+                            $("#game_list").append(`<div id = "list_block"> id of game : ${each.id} <br> username : ${each.username}
+                                <br> game name : ${each.game_name} <br> rating : ${each.rating} <br> description : ${each.description} </div> <br> `);
+                        });
+                    } else {
+                        console.log(xhr.status, xhr.statusText);
+                    }
+                }
+            });
+            $("#add_btn").click(function(){
+                alert("Game added");
+
+                const xhr = new XMLHttpRequest();
+                xhr.open("POST","http://localhost:3000/games");
+                xhr.setRequestHeader("content-type","application/json");
+                let data = { id: $("#id_input").val(), username: $("#username_input").val(), game_name: $("#gamename_input").val(), rating: $("#rating_input").val(), description: $("#description_input").val() };
+                xhr.send(JSON.stringify(data));
+                xhr.onload = () => {
+                    if (xhr.status === 200) {
+                        let res = JSON.parse(xhr.response);
+                        alert(JSON.stringify(res));
+                    } else {
+                        console.log(xhr.status, xhr.statusText);
+                    }
+                }
+            });
+
+            $("#del_btn").click(function(){
+                const xhr = new XMLHttpRequest();
+                
+                xhr.open("DELETE","http://localhost:3000/games/" + $("#id_input").val());
+                xhr.setRequestHeader("content-type","application/json");
+                xhr.send();
+                
+                xhr.onload = () => {
+                    if (xhr.status === 200) {
+                        let res = JSON.parse(xhr.responseText);
+                        const name = res.game_name;
+                        alert("Game \"" + name + "\" deleted");
+                        
+                    } else {
+                        alert("Failed");
+                    }
+                }
+            });
+
+            $("#edit_btn").click(function(){
+
+                const xhr = new XMLHttpRequest();
+                xhr.open("PUT","http://localhost:3000/games/" + $("#id_input").val());
+                xhr.setRequestHeader("content-type","application/json");
+                let data = { id: $("#id_input").val(), username: $("#username_input").val(), game_name: $("#gamename_input").val(), rating: $("#rating_input").val(), description: $("#description_input").val() };
+                xhr.send(JSON.stringify(data));
+                xhr.onload = () => {
+                    if (xhr.status === 200) {
+                        let res = JSON.parse(xhr.response);
+                        alert("Edited");
+                    } else {
+                        alert("Failed");
+                    }
+                }
+            });
+        </script>
+    </body>
+</html>
