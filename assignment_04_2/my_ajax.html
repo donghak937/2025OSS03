@@ -40,11 +40,6 @@
 
                 <div class="modal-body">
                     <div class="mb-3">
-                        <label for="add_id_input" class="form-label">id</label>
-                        <input type="text" class="form-control" id="add_id_input">
-                    </div>
-
-                    <div class="mb-3">
                         <label for="add_username_input" class="form-label">username</label>
                         <input type="text" class="form-control" id="add_username_input">
                     </div>
@@ -168,7 +163,7 @@
                 const xhr = new XMLHttpRequest();
                 xhr.open("POST","https://68dde703d7b591b4b78dd59c.mockapi.io/games");
                 xhr.setRequestHeader("content-type","application/json");
-                let data = { id: $("#add_id_input").val(), username: $("#add_username_input").val(), game_name: $("#add_gamename_input").val(), rating: $("#add_rating_input").val(), description: $("#add_description_input").val() };
+                let data = {username: $("#add_username_input").val(), game_name: $("#add_gamename_input").val(), rating: $("#add_rating_input").val(), description: $("#add_description_input").val() };
                 xhr.send(JSON.stringify(data));
                 xhr.onload = () => {
                     if (xhr.status === 200) {
