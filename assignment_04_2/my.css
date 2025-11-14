@@ -1,0 +1,100 @@
+@media (max-width: 575.98px) {
+
+    .navbar .container-fluid {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .navbar .navbar-text {
+        order: -1;
+        width: 100%;
+        text-align: center;
+        margin: .25rem 0;
+        font-weight: 700;
+    }
+
+    .navbar .navbar-nav {
+        order: 0;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        align-items: center;
+        justify-content: center;
+        gap: 12px;
+        width: 100%;
+    }
+
+    .navbar .nav-item {
+        margin: 0;
+    }
+
+    .navbar .nav-link {
+        padding: .25rem .5rem;
+    }
+
+
+    .row.mb-3.align-items-center>.col-sm-1,
+    .row.mb-3.align-items-center>.col-sm-2,
+    .row.mb-3.align-items-center>.col-sm-5,
+    .row.mb-3.align-items-center>.col-sm-6,
+    .row.mb-3.align-items-center>.col-sm-7 {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+
+    .row.mb-3.align-items-center label.col-form-label {
+        margin-bottom: .25rem;
+    }
+
+    .form-select.w-auto {
+        width: 100% !important;
+    }
+
+    .d-flex.justify-content-end {
+        justify-content: center;
+    }
+
+
+    .container .d-flex.align-items-center,
+    .container .d-flex.align-items-center.gap-2 {
+        flex-wrap: wrap;
+        justify-content: center;
+        row-gap: .5rem;
+        column-gap: .5rem;
+    }
+
+    .container .d-flex.align-items-center>.me-auto {
+        text-align: center;
+        order: 0;
+        flex: 0 0 100%;
+        max-width: 100%;
+        margin-right: 0;
+    }
+
+    .container .d-flex.align-items-center>select.form-select {
+        order: 1;
+        flex: 0 0 calc(50% - .25rem);
+        max-width: calc(50% - .25rem);
+    }
+
+}
+
+@media (min-width: 576px) {
+
+    .container .d-flex.align-items-center>.btn,
+    .container .d-flex.align-items-center>a.btn {
+        width: auto;
+        flex: 0 0 auto;
+        max-width: none;
+    }
+}
+
+
+.no-resize {
+    resize: none;
+}
+
+a {
+    color: black;
+    text-decoration-line: none;
+}
